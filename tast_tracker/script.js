@@ -2,16 +2,14 @@ document.getElementById("add-btn").addEventListener("click", addTodo);
 
 const todoList = [];
 
-function addTodo() {
+function addTodo(){
   const input = document.getElementById("todo-input");
   const priority = document.getElementById("priority-select").value;
   const value = input.value.trim();
 
   if (value === "") return;
   todoList.push({ task: value, priority });
-
   renderTodos();
-
   input.value = "";
 }
 
